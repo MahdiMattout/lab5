@@ -6,7 +6,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: aqua;
+  background-color: #01dddd;
 }
 
 #sliderTextDiv {

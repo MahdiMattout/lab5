@@ -2,7 +2,6 @@ const $ = (id) => { return document.getElementById(id); }
 const slider = $('slider');
 $('addressDetailsForm').style.display='none';
 $('orderSummaryForm').style.display='none';
-document.body.style.backgroundColor = '#01dddd';
 
 
 const getSize = () => {
@@ -16,6 +15,13 @@ const checkedToppings = (id) => {
     if (inputTags[i].checked) { checked.push(inputTags[i]); }
   }
   return checked;
+}
+
+const unCheckToppings = (id) => {
+    var checkboxes = $(id).getElementsByTagName('input');
+  for (let i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = false;
+    }
 }
 
 const getMeat = () => {
@@ -84,11 +90,18 @@ const ChangePizzaSize = (sliderValue) => {
   sliderText.textContent = `${_getPizzaSize(sliderValue)} ${_getPizzaPrice(sliderValue)}$`;
   pizzaImg.style.width = _getImageSize(sliderValue);
   pizzaImg.style.height = _getImageSize(sliderValue);
+  slider.value = sliderValue;
 }
 
 slider.addEventListener('change', () => {
   ChangePizzaSize(slider.value);
 });
+
+window.addEventListener('load', () => {
+  ChangePizzaSize('1');
+  unCheckToppings('meatFieldSet');
+  unCheckToppings('veggiesFieldSet');
+} )
 
 const _getMeatToppingPrice = () => {
   return getMeat().length * 2;
