@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="form.css">
+  <title>Pizza Order Form</title>
+</head>
+<body>
+  <h1 class="Header">Pizza Order Form</h1>
+  <form id="form1" class="formFlexContainer">
+      <fieldset class="fieldsetContainer">
+        <div id="sliderTextDiv">
+          <input type="range" id="sliderRange" name="range" min="1" max="4" value="1" />
+          <p id="sizeAndPrice">Small 6$</p>
+        </div>
+        <div id="imgContainer">
+          <img id="pizzaImg" src="pizza.jpg" width="100px" height="100px" />
+        </div>
+      </fieldset>
+
+      <fieldset id="meatFieldSet" class="fieldsetContainer fieldsetFlexContainer">
+        <legend>Meat Toppings (+2$ for each)</legend>
+        <div>
+          <input id="pepperoniCheckbox" type="checkbox" value="pepperoni" />
+          <label for="pepperoniCheckbox">Pepperoni</label>
+        </div>
+        <div>
+          <input id="sausageCheckbox" type="checkbox" value="sausage" />
+          <label for="sausageCheckbox">Sausage</label>
+        </div>
+        <div>
+          <input id="groundBeefCheckbox" type="checkbox" value="groundBeef" />
+          <label for="groundBeefCheckbox">Pepperoni</label>
+        </div>
+        <div>
+          <input id="anchovyCheckbox" type="checkbox" value="anchovy" />
+          <label for="anchovyCheckbox">Anchovy</label>
+        </div>
+        <div>
+          <input id="chickenCheckbox" type="checkbox" value="chicken" />
+          <label for="chickenCheckbox">Chicken</label>
+        </div>
+      </fieldset>
+
+      <fieldset id="veggiesFieldSet" class="fieldsetContainer fieldsetFlexContainer">
+        <legend>Veggies (+1$ for each)</legend>
+        <div>
+          <input id="tomatoesCheckbox" type="checkbox" value="tomatoes" />
+          <label for="tomatoesCheckbox">Tomatoes</label>
+        </div>
+        <div>
+          <input id="onionsCheckbox" type="checkbox" value="onions" />
+          <label for="onionsCheckbox">Onions</label>
+        </div>
+        <div>
+          <input id="olivesCheckbox" type="checkbox" value="olives" />
+          <label for="olivesCheckbox">Olives</label>
+        </div>
+        <div>
+          <input id="mushroomsCheckbox" type="checkbox" value="mushrooms" />
+          <label for="mushroomsCheckbox">Mushrooms</label>
+        </div>
+        <div>
+          <input id="pineappleCheckbox" type="checkbox" value="pineapple" />
+          <label for="pineappleCheckbox">Pineapple</label>
+        </div>
+        <div>
+          <input id="spinachCheckbox" type="checkbox" value="spinach" />
+          <label for="spinachCheckbox">Spinach</label>
+        </div>
+        <div>
+          <input id="jalapenoCheckbox" type="checkbox" value="jalapeno" />
+          <label for="jalapenoCheckbox">Jalapeno</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldsetContainer fieldsetFlexContainer">
+        <legend>Cheese</legend>
+        <div>
+          <input checked id="regularCheeseRadio" type="radio" name="cheeseRadio" value="1" />
+          <label for="regularCheeseRadio">Regular Cheese</label>
+        </div>
+        <div>
+          <input id="noCheeseRadio" type="radio" name="cheeseRadio" value="2" />
+          <label for="noCheeseRadio">No Cheese</label>
+        </div>
+        <div>
+          <input id="extraCheeseRadio" type="radio" name="cheeseRadio" value="3" />
+          <label for="extraCheeseRadio">Extra Cheese ($3)</label>
+        </div>
+      </fieldset>
+
+      <fieldset id="paymentFieldset" class="fieldsetContainer">
+        <legend>Payment</legend>
+        <div>
+          <input checked id="cashPaymentRadio" type="radio" name="paymentRadio" value="cash" />
+          <label for="cashPaymentRadio">Cash</label>
+        </div>
+        <div>
+          <input id="masterCardPaymentRadio" type="radio" name="paymentRadio" value="masterCard" />
+          <label for="masterCardPaymentRadio">MasterCard</label>
+        </div>
+        <div>
+          <input id="visaPaymentRadio" type="radio" name="paymentRadio" value="visa" />
+          <label for="visaPaymentRadio">Visa</label>
+        </div>
+      </fieldset>
+      <input id="ex1NextButton" type="button" value="Next">
+    </form>
+    <form id="addressDetailsForm">
+      <div class="addressFieldContainer">
+        <label for="firstNameField">First Name:</label>
+        <input type="text" id="firstNameField" />
+      </div>
+      <div class="addressFieldContainer">
+        <label for="lastNameField">Last Name:</label>
+        <input type="text" id="lastNameField" />
+      </div>
+      <div class="addressFieldContainer">
+        <label for="emailField">E-mail:</label>
+        <input type="text" id="emailField" />
+      </div>
+      <div class="addressFieldContainer">
+        <label for="phoneNumberField">Phone Number:</label>
+        <input type="tel" id="phoneNumberField" />
+      </div>
+      <div class="addressFieldContainer">
+        <label for="citySelect">City:</label>
+        <select name="city" id="citySelect">
+          <option value="" disabled selected>--Please choose an option--</option>
+          <option value="beirutOptionSelect">Beirut</option>
+          <option value="jbeilOptionSelect">Jbeil</option>
+          <option value="saidaOptionSelect">Saida</option>
+        </select>
+      </div>
+      <div class="addressFieldContainer">
+        <label for="addressTextArea">Address:</label>
+        <textarea id="addressTextArea" name="addressTextArea" rows="4" cols="50"></textarea>
+      </div>
+    </form>
+    <div id="OrderSummary">
+      <h1>Order Summary</h1>
+      <h2>Deliver to</h2>
+      <p id="dlvrTo"></p>
+      <h2>Order</h2>
+      <ul id="orderList"></ul>
+      <h2 id="total">Total</h2>
+    </div>
+    <script src="lab5.js"></script>
+  </body>
+</body>
+</html>

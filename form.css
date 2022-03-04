@@ -1,0 +1,68 @@
+.Header {
+  text-align: center;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: aqua;
+}
+
+#sliderTextDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+.formFlexContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#ImgContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.fieldsetContainer {
+  border: solid 1px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.fieldsetFlexContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#paymentFieldset {
+  display: flex;
+  flex-direction: row;
+}
+
+#addressDetailsForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.addressFieldContainer {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+#OrderSummary {
+  width: 50vw;
+  margin-left: 25vw;
+  padding: 10px;
+  border-radius: 10px;
+  border-color: green;
+  border-style: solid;
+  border-width: thick;
+  background-color: #ffffff;
+}
