@@ -45,15 +45,13 @@ body {
 #addressDetailsForm {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
+  width: 100%;
 }
 
 .addressFieldContainer {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  margin-bottom: 10px;
 }
 
 #OrderSummary {

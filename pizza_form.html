@@ -107,47 +107,58 @@
           <label for="visaPaymentRadio">Visa</label>
         </div>
       </fieldset>
-      <input id="ex1NextButton" type="button" value="Next">
+      <input id="form1NextButton" type="button" value="Next">
     </form>
     <form id="addressDetailsForm">
       <div class="addressFieldContainer">
         <label for="firstNameField">First Name:</label>
-        <input type="text" id="firstNameField" />
+        <input class="addressDetailsFormFields" type="text" id="firstNameField" />
       </div>
       <div class="addressFieldContainer">
         <label for="lastNameField">Last Name:</label>
-        <input type="text" id="lastNameField" />
+        <input class="addressDetailsFormFields" type="text" id="lastNameField" />
       </div>
       <div class="addressFieldContainer">
         <label for="emailField">E-mail:</label>
-        <input type="text" id="emailField" />
+        <input class="addressDetailsFormFields" type="text" id="emailField" />
       </div>
       <div class="addressFieldContainer">
         <label for="phoneNumberField">Phone Number:</label>
-        <input type="tel" id="phoneNumberField" />
+        <input class="addressDetailsFormFields" type="tel" id="phoneNumberField" />
       </div>
       <div class="addressFieldContainer">
         <label for="citySelect">City:</label>
         <select name="city" id="citySelect">
           <option value="" disabled selected>--Please choose an option--</option>
-          <option value="beirutOptionSelect">Beirut</option>
-          <option value="jbeilOptionSelect">Jbeil</option>
-          <option value="saidaOptionSelect">Saida</option>
+          <option value="Beirut">Beirut</option>
+          <option value="Tripoli">Tripoli</option>
+          <option value="Sour">Sour</option>
+          <option value="Saida">Saida</option>
+          <option value="Jounieh">Jounieh</option>
         </select>
       </div>
       <div class="addressFieldContainer">
         <label for="addressTextArea">Address:</label>
         <textarea id="addressTextArea" name="addressTextArea" rows="4" cols="50"></textarea>
       </div>
+      <div>
+        <input id="addressDetailsFormBackButton" type="button" value="Back">
+        <input id="addressDetailsFormNextButton" type="button" value="Next">
+      </div>
     </form>
-    <div id="OrderSummary">
-      <h1>Order Summary</h1>
-      <h2>Deliver to</h2>
-      <p id="dlvrTo"></p>
-      <h2>Order</h2>
-      <ul id="orderList"></ul>
-      <h2 id="total">Total</h2>
-    </div>
+    <form id="orderSummaryForm">
+      <div id="OrderSummary">
+        <h1>Order Summary</h1>
+        <h2>Deliver to</h2>
+        <p id="dlvrTo"></p>
+        <h2>Order</h2>
+        <ul id="orderList"></ul>
+        <h2 id="total">Total</h2>
+        <div>
+          <input id="orderSummaryBackButton" type="button" value="Back">
+        </div>
+      </div>
+    </form>
     <script src="form.js"></script>
 </body>
 </html>
