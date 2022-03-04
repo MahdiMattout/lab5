@@ -12,7 +12,7 @@
   <form id="form1" class="formFlexContainer">
       <fieldset class="fieldsetContainer">
         <div id="sliderTextDiv">
-          <input type="range" id="sliderRange" name="range" min="1" max="4" value="1" />
+          <input type="range" id="slider" name="range" min="1" max="4" value="1" />
           <p id="sizeAndPrice">Small 6$</p>
         </div>
         <div id="imgContainer">
@@ -76,7 +76,7 @@
         </div>
       </fieldset>
 
-      <fieldset class="fieldsetContainer fieldsetFlexContainer">
+      <fieldset id="cheese" class="fieldsetContainer fieldsetFlexContainer">
         <legend>Cheese</legend>
         <div>
           <input checked id="regularCheeseRadio" type="radio" name="cheeseRadio" value="1" />
@@ -148,7 +148,6 @@
       <ul id="orderList"></ul>
       <h2 id="total">Total</h2>
     </div>
-    <script src="lab5.js"></script>
-  </body>
+    <script src="form.js"></script>
 </body>
 </html>

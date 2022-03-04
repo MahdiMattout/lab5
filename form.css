@@ -21,7 +21,7 @@ body {
   margin-right: 100px;
 }
 
-#ImgContainer {
+#imgContainer {
   display: flex;
   justify-content: center;
 }
